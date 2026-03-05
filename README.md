@@ -53,6 +53,18 @@ npm link
    `bm path`  
    Domyślnie: `~/.bm-bookmarks.json`. Możesz ustawić `BM_PATH` w środowisku.
 
+## Publikacja na GitHub
+
+Repozytorium: `yuwxd/bm-cli`. Po utworzeniu pustego repo na GitHubie:
+
+```bash
+cd bm-cli
+git remote add origin https://github.com/yuwxd/bm-cli.git
+git push -u origin main
+```
+
+CI (testy) uruchamia się przy każdym pushu na `main`.
+
 ## Licencja
 
 MIT. Autor: **yuw**.
