@@ -1,18 +1,18 @@
 # bm-cli
 
-**Prosty menedżer zakładek w terminalu.** Jedna plikowa baza (JSON) w katalogu domowym, komendy: dodawanie, listowanie, wyszukiwanie, otwieranie w przeglądarce, eksport do HTML. Bez zewnętrznych serwisów — wszystko lokalnie.
+**Simple terminal bookmark manager.** Single-file store (JSON) in your home directory. Commands: add, list, search, open in browser, export to HTML. No external services — everything stays local.
 
-- **Czego dotyczy:** Przechowywanie i szybki dostęp do ulubionych linków z CLI (add, list, search, open, rm, export-html). Przydatne gdy wolisz terminal niż zakładki w przeglądarce lub chcesz backup w jednym pliku.
-- **Co dokładnie robi:** Zapisuje zakładki w `~/.bm-bookmarks.json`. Komenda `add` dodaje URL z opcjonalnym tytułem i tagami; `list` i `search` wypisują wyniki; `open <id>` otwiera link w domyślnej przeglądarce; `export-html` generuje plik HTML z listą linków.
-- **Open source:** MIT, autor: **yuw**.
+- **What it’s for:** Storing and quickly accessing links from the CLI (add, list, search, open, rm, export-html). Handy when you prefer the terminal over browser bookmarks or want a single-file backup.
+- **What it does:** Saves bookmarks to `~/.bm-bookmarks.json`. The `add` command adds a URL with optional title and tags; `list` and `search` print results; `open <id>` opens the link in your default browser; `export-html` generates an HTML file with all links.
+- **Open source:** MIT. Author: **yuw**.
 
 ---
 
-## Wymagania
+## Requirements
 
 Node.js 18+
 
-## Instalacja
+## Install
 
 ```bash
 git clone https://github.com/yuwxd/bm-cli.git
@@ -20,42 +20,42 @@ cd bm-cli
 npm link
 ```
 
-(lub uruchamiaj przez `node cli.js` bez linkowania)
+(Or run via `node cli.js` without linking.)
 
-## Użycie krok po kroku
+## Usage (step by step)
 
-1. **Dodaj zakładkę:**  
+1. **Add a bookmark:**  
    `bm add https://example.com "Example"`
 
-2. **Dodaj z tagami:**  
+2. **Add with tags:**  
    `bm add https://github.com yuw --tag dev --tag code`
 
-3. **Pokaż wszystkie:**  
+3. **List all:**  
    `bm list`
 
-4. **Lista tylko z danym tagiem:**  
+4. **List only bookmarks with a given tag:**  
    `bm list --tag dev`
 
-5. **Szukaj po tekście (url / tytuł / tag):**  
+5. **Search by text (URL, title, or tag):**  
    `bm search github`
 
-6. **Otwórz w przeglądarce (po ID z listy):**  
+6. **Open in browser (by ID from list):**  
    `bm open 1`
 
-7. **Usuń zakładkę:**  
+7. **Remove a bookmark:**  
    `bm rm 1`
 
-8. **Eksport do HTML:**  
+8. **Export to HTML:**  
    `bm export-html`  
    `bm export-html my-links.html`
 
-9. **Gdzie jest plik z zakładkami:**  
+9. **Where the bookmark file lives:**  
    `bm path`  
-   Domyślnie: `~/.bm-bookmarks.json`. Możesz ustawić `BM_PATH` w środowisku.
+   Default: `~/.bm-bookmarks.json`. You can set `BM_PATH` in the environment.
 
-## Publikacja na GitHub
+## Publishing to GitHub
 
-Repozytorium: `yuwxd/bm-cli`. Po utworzeniu pustego repo na GitHubie:
+Repo: `yuwxd/bm-cli`. After creating an empty repo on GitHub:
 
 ```bash
 cd bm-cli
@@ -63,8 +63,8 @@ git remote add origin https://github.com/yuwxd/bm-cli.git
 git push -u origin main
 ```
 
-CI (testy) uruchamia się przy każdym pushu na `main`.
+CI (tests) runs on every push to `main`.
 
-## Licencja
+## License
 
-MIT. Autor: **yuw**.
+MIT. Author: **yuw**.
