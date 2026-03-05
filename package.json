@@ -1,0 +1,14 @@
+{
+  "name": "bm-cli",
+  "version": "1.0.0",
+  "description": "CLI bookmark manager: add, list, search, open, export to HTML. One JSON file.",
+  "type": "module",
+  "bin": { "bm": "./cli.js" },
+  "scripts": {
+    "start": "node cli.js",
+    "test": "node test.js"
+  },
+  "keywords": ["bookmark", "cli", "manager", "links"],
+  "author": "yuw",
+  "license": "MIT"
+}
